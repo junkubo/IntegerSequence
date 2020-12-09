@@ -1,7 +1,14 @@
 import java.util.NoSuchElementException;
 public class ArraySequence implements IntegerSequence{
-  int currentIndex;
-  int []data;
+  private int currentIndex;
+  private int[] data;
+  private int[] dataseq;
 
-  public ArraySequence(int [] other){  }
+  public ArraySequence(int [] other){
+    int[] data = other;
+  }
+  public ArraySequence(IntegerSequence otherseq){
+    int[] dataseq = otherseq;
+    reset();
+  }
 }
